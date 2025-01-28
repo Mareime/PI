@@ -82,3 +82,4 @@ Route::delete('/users/{user}', [controleruser::class, 'destroy'])->name('users.d
 Route::get('compteurs', [CompteurController::class, 'index'])->name('compteurs.index'); 
 Route::get('compteurs/create', [CompteurController::class, 'create'])->name('compteurs.create');  
 Route::post('compteurs', [CompteurController::class, 'store'])->name('compteurs.store');  
+// commit
