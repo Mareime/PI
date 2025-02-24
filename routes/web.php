@@ -79,7 +79,8 @@ Route::get('/users/{user}/edit', [controleruser::class, 'edit'])->name('users.ed
 Route::put('/users/{user}', [controleruser::class, 'update'])->name('users.update');
 Route::delete('/users/{user}', [controleruser::class, 'destroy'])->name('users.destroy');
 // route for compteure
-Route::get('compteurs', [CompteurController::class, 'index'])->name('compteurs.index'); 
-Route::get('compteurs/create', [CompteurController::class, 'create'])->name('compteurs.create');  
-Route::post('compteurs', [CompteurController::class, 'store'])->name('compteurs.store');  
-// commit
+Route::get('/compteurs', [CompteurController::class, 'index'])->name('compteurs.index'); 
+Route::get('/compteurs/create', [CompteurController::class, 'create'])->name('compteurs.create');  
+Route::post('/compteurs', [CompteurController::class, 'store'])->name('compteurs.store');  
+Route::get('/compteurs/{annee}/edite', [CompteurController::class, 'edit'])->name('compteurs.edite');
+Route::put('/compteurs/{annee}', [CompteurController::class, 'update'])->name('compteurs.update');

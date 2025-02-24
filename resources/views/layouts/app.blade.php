@@ -42,9 +42,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ route('logout') }}">Déconnexion</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link active" href="{{ route('users.index') }}">Les utilisateures</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>

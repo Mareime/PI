@@ -28,5 +28,30 @@ class CompteurController extends Controller
         Compteur::create($request->all());
         return redirect()->route('compteurs.index')->with('success', 'Compteur ajouté avec succès!');
     }
+    public function edit($annee) {
+        $compteur = Compteur::find($annee);
+    
+        if (!$compteur) {
+            return redirect()->route('compteurs.index')->with('error', 'Compteur non trouvé.');
+        }
+    
+        return view('compteurs.edit', compact('compteur'));
+    }
+    public function update(Request $request, $annee) {
+        $request->validate([
+            'annee' => 'required|integer',
+            'compteur' => 'required|integer',
+        ]);
+    
+        $compteur = Compteur::find($annee);
+    
+        if (!$compteur) {
+            return redirect()->route('compteurs.index')->with('error', 'Compteur non trouvé.');
+        }
+    
+        $compteur->update($request->all());
+    
+        return redirect()->route('compteurs.index')->with('success', 'Compteur modifié avec succès.');
+    }
 
 }

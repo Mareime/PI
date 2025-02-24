@@ -4,15 +4,15 @@
 <div class="container">
     <h2>Liste des Comptes</h2>
 
-    <div class="d-flex justify-content-between mb-3">
+    {{-- <div class="d-flex justify-content-between mb-3">
         <a href="{{ route('compte.create') }}" class="btn btn-success">Créer un nouveau compte</a>
         
         <!-- Boutons pour exportation et importation -->
-        <div>
+        {{-- <div>
             <a href="{{ route('compte.export') }}" class="btn btn-primary">Exporter</a>
             <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#importModal">Importer</button>
-        </div>
-    </div>
+        </div> --}}
+    {{-- </div>  --}}
 
     <!-- Modal pour l'importation -->
     <div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="importModalLabel" aria-hidden="true">
@@ -57,7 +57,7 @@
                 <th>Solde</th>
                 <th>Date de Création</th>
                 <th>Description</th>
-                <th>Actions</th>
+                {{-- <th>Actions</th> --}}
             </tr>
         </thead>
         <tbody>
@@ -68,14 +68,14 @@
                     <td>{{ $compte->solde }}</td>
                     <td>{{ $compte->date_creation }}</td>
                     <td>{{ $compte->description }}</td>
-                    <td>
+                    {{-- <td>
                         <a href="{{ route('compte.edit', $compte) }}" class="btn btn-warning btn-sm">Modifier</a>
                         <form action="{{ route('compte.destroy', $compte) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
                         </form>
-                    </td>
+                    </td> --}}
                 </tr>
             @endforeach
         </tbody>

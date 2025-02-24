@@ -11,17 +11,17 @@
         </div>
     @endif
 
-    <div class="mb-3 text-end">
+    {{-- <div class="mb-3 text-end">
         <a href="{{ route('taxes.create') }}" class="btn btn-warning btn-sm">Ajouter une Taxe</a>
         <a href="{{ route('taxes.export') }}" class="btn btn-primary btn-sm">Exporter</a>
-    </div>
+    </div> --}}
     <div class="mb-3">
         <form action="{{ route('taxes.import') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="input-group">
+            {{-- <div class="input-group">
                 <input type="file" name="file" class="form-control" required>
                 <button type="submit" class="btn btn-success">Importer</button>
-            </div>
+            </div> --}}
         </form>
     </div>
     
@@ -30,7 +30,7 @@
             <tr>
                 <th>Nom du taxe</th>
                 <th>Pourcentage du taxe</th>
-                <th>Actions</th>
+                {{-- <th>Actions</th> --}}
             </tr>
         </thead>
         <tbody>
@@ -38,7 +38,7 @@
             <tr>
                 <td>{{ $taxe->nom }}</td>
                 <td>{{ $taxe->pourcentage }}</td>
-                <td>
+                {{-- <td>
                     <a href="{{ route('taxes.edit', $taxe->id) }}" class="btn btn-warning btn-sm">Modifier</a>
 
                     <!-- Bouton Supprimer -->
@@ -49,7 +49,7 @@
                             Supprimer
                         </button>
                     </form>
-                </td>
+                </td> --}}
             </tr>
             @endforeach
         </tbody>

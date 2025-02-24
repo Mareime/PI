@@ -10,14 +10,14 @@
         </div>
     @endif
 
-    <a href="{{ route('compteurs.create') }}" class="btn btn-dark mb-3">Ajouter un compteur</a>
+    {{-- <a href="{{ route('compteurs.create') }}" class="btn btn-dark mb-3">Ajouter un compteur</a> --}}
 
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th>Année</th>
                 <th>Compteur</th>
-                <th>Actions</th>
+                {{-- <th>Actions</th> --}}
             </tr>
         </thead>
         <tbody>
@@ -25,9 +25,14 @@
                 <tr>
                     <td>{{ $compteur->annee }}</td>
                     <td>{{ $compteur->compteur }}</td>
-                    <td>
-                        
-                    </td>
+                    {{-- <td>
+                        <a href="{{ route("compteurs.edite",$compteur->annee)}}" class="btn btn-warning btn-sm">Modifier</a>
+                        <form action="" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                        </form>
+                    </td> --}}
                     
                 </tr>
             @endforeach

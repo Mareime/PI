@@ -130,7 +130,7 @@ class PaiementController extends Controller
         
 
     }
-    public function destroy($id, $annee)
+    public function destroy($id)
     {
         try {
             $paiement = Paiement::where('id', $id)->firstOrFail();

@@ -4,7 +4,7 @@
 
     <div class="container">
         <h2 class="mb-4">Liste des Bénéficiaires</h2>
-        <a href="{{ route('beneficiaire.create') }}" class="btn btn-success mb-3">Créer un nouveau Bénéficiaire</a>
+        {{-- <a href="{{ route('beneficiaire.create') }}" class="btn btn-success mb-3">Créer un nouveau Bénéficiaire</a> --}}
 
         @if (session('success'))
             <div class="alert alert-success">
@@ -13,16 +13,16 @@
         @endif
 
         <!-- Conteneur avec alignement à droite pour les boutons Exporter et Importer -->
-        <div class="mb-3 d-flex justify-content-end">
+        {{-- <div class="mb-3 d-flex justify-content-end">
             <a href="{{ route('beneficiaire.export') }}" class="btn btn-primary mr-2">Exporter</a>
 
             <!-- Bouton d'importation avec une modale -->
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#importModal">
                 Importer
             </button>            
-        </div>
+        </div> --}}
          <!-- Modal pour l'importation -->
-         <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="importModalLabel" aria-hidden="true">
+         {{-- <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="importModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -46,7 +46,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <!-- Tableau des bénéficiaires -->
         <table class="table table-bordered table-striped">
@@ -58,7 +58,7 @@
                     <th>Téléphone</th>
                     <th>Email</th>
                     <th>Type de Bénéficiaire</th>
-                    <th>Actions</th>
+                    {{-- <th>Actions</th> --}}
                 </tr>
             </thead>
             <tbody>
@@ -70,7 +70,7 @@
                     <td>{{ $beneficiaire->telephone }}</td>
                     <td>{{ $beneficiaire->email }}</td>
                     <td>{{ $beneficiaire->type_beneficiaire }}</td>
-                    <td>
+                    {{-- <td>
                         <a href="{{ route('beneficiaire.edit', $beneficiaire) }}" class="btn btn-warning btn-sm">Modifier</a>
                         <form action="{{ route('beneficiaire.destroy', $beneficiaire) }}" method="POST" style="display:inline;" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce bénéficiaire ?');">
                             @csrf
@@ -79,7 +79,7 @@
                         </form>
                         
                         </form>
-                    </td>
+                    </td> --}}
                 </tr>
                 @endforeach
             </tbody>

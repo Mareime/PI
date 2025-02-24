@@ -11,6 +11,7 @@ class Compteur extends Model
     use HasFactory;
 
     protected $table = 'compteur';
-
+    protected $primaryKey = 'annee'; // Définir 'annee' comme clé primaire
+    public $incrementing = false; // Désactiver l'auto-incrémentation
     protected $fillable = ['annee', 'compteur'];
 }

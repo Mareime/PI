@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Modifier le compteur</h1>
 
-    <form action="{{ route('compteurs.update', $compteur->id) }}" method="POST">
+    <form action="{{ route('compteurs.update', $compteur->aneee) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">
